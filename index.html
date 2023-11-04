@@ -168,6 +168,25 @@
 
 			</div>
 
+			<!-- send Email -->
+			<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+				<script>
+					(function () {
+					  emailjs.init('bu1taiOb_fxdGQPsq');
+					})();
+				 </script>
+				 <script>
+					const handleForm = async (e) => {
+					  try {
+						await emailjs.sendForm('service_qz6zxh3', 'template_nf0ty7k', document.getElementById('post'));
+						alert('email sent!');
+					  } catch (error) {
+						console.error(error);
+						alert('Failed to send email');
+					  }
+					};
+				  </script>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
