@@ -129,7 +129,8 @@
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
 							<p>Please fill out the form below and a representative will get backto you shortly.</p>
-							<form method="post" action="#">
+							<!-- <form method="post" action="#"> -->
+								<form method="post" onSubmit="handleForm()"> 
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -178,7 +179,7 @@
 				 <script>
 					const handleForm = async (e) => {
 					  try {
-						await emailjs.sendForm('service_qz6zxh3', 'template_nf0ty7k', document.getElementById('post'));
+						await emailjs.sendForm('service_3ftu4hx', 'template_nf0ty7k', document.getElementById('post'));
 						alert('email sent!');
 					  } catch (error) {
 						console.error(error);
