@@ -1,0 +1,51 @@
+<!--
+ * @Brief: 
+ * @Author: Xinyu Tian
+ * @Github: https://github.com/XITechs
+ * @CreateTime: 2023-11-04 21:46:13
+ * @LastEditTime: 2023-11-04 21:54:23
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EmailJS Example</title>
+
+  </head>
+
+  <body>
+    <form id="contact-form" onSubmit="handleForm()">
+      <label for="name">Fullname</label>
+      <input type="text" name="name" />
+      <br/><br/>
+
+      <label for="email">Your Email</label>
+      <input type="email" name="email"/>
+      <br/><br/>
+
+      <label for="message">Message</label>
+      <textarea name="message"></textarea>
+      <br/><br/>
+
+      <input type="submit" value="Send"/>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init('K-JBsKDaDl-8lI2POIPCC');
+      })();
+    </script>
+    <script>
+      const handleForm = async (e) => {
+        try {
+          await emailjs.sendForm('service_3ftu4hx', 'template_nf0ty7k', document.getElementById('contact-form'));
+          alert('email sent!');
+        } catch (error) {
+          console.error(error);
+          alert('Failed to send email');
+        }
+      };
+    </script>
+  </body>
+</html>
