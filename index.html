@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 		<link rel="icon" href="images/favicon.ico" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -56,7 +57,7 @@
 									<div class="content">
 										<h2 class="major">Electronic Solution</h2>
 										<p>From intricate multi-channel sensor readout systems to efficient wireless modules and precise motor control circuits, etc., we have the expertise to craft tailored electronic components. Our commitment to quality and innovation is the driving force behind every project, ensuring your research endeavors are powered by the most advanced and reliable technology.</p>
-										<a href="#" class="special">Learn more</a>
+										<a href="#scroll-target" class="special scroll-to-bottom">Learn more</a>
 									</div>
 								</div>
 							</section>
@@ -80,7 +81,7 @@
 									<div class="content">
 										<h2 class="major">Product Desgin Assistance</h2>
 										<p>Come across a fancy idea but troubled with translating it into a product? We are here to bridge the gap between innovative materials and technologies to tangible prototypes. Leveraging our extensive experience in product design alongside top-tier production capabilities, we empower you to swiftly materialize possible prototypes. We stand ready to transform your concepts into reality, offering support and guidance to navigate the journey from ideation to prototype with efficiency and precision. Trust us to be your catalyst in making potential prototypes a palpable success in record time.</p>
-										<a href="#" class="special">Learn more</a>
+										<a href="#scroll-target" class="special scroll-to-bottom">Learn more</a>
 									</div>
 								</div>
 							</section>
@@ -95,25 +96,25 @@
 											<a href="#" class="image"><img src="images/pic04.png" alt="" /></a>
 											<h3 class="major">Sport Bands</h3>
 											<p>Harnessing cutting-edge hydrogel materials for non-invasive health metrics tracking through athletic endeavors. Discover the fusion of novel material science and electrochemical analysis with wearable tech, offering persistent vital sign monitoring even during rigorous activities.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#scroll-target" class="special scroll-to-bottom">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic05.png" alt="" /></a>
 											<h3 class="major">Magic Control</h3>
 											<p>Elevating EMG precision with material breakthroughs for intuitive actuator control. This case demonstrates how advanced material innovation enriches signal acquisition, enabling refined control of prosthetics and drones through muscle activity recognitions</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#scroll-target" class="special scroll-to-bottom">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic06.png" alt="" /></a>
 											<h3 class="major">Brain-machine interface</h3>
 											<p>Revolutionary soft brain electrodes for cortical monitoring and stimulation therapy. By fusing novel materials with device physics, this technology attaches seamlessly to the brain surface, offering precise signal tracking and electrical therapeutic interventions.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#scroll-target" class="special scroll-to-bottom">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic07.png" alt="" /></a>
 											<h3 class="major">SWA 6xx BIOPrinter</h3>
 											<p>Pioneering bioprinting solutions: integrating mechanical, electronic, and biological engineering expertise to create advanced 3D bioprinters. These sophisticated machines utilize novel biomaterials, enabling rapid prototyping in tissue engineering, biologically-integrated electronics, and biochemical sensors, expanding the horizons of biomedical experimentation.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#scroll-target" class="special scroll-to-bottom">Learn more</a>
 										</article>
 									</section>
 									<ul class="actions">
@@ -123,14 +124,22 @@
 							</section>
 
 					</section>
-
+					<div id="modal" class="modal">
+						<div class="modal-content">
+						<span class="modal-close-btn">&times;</span>
+						<div class="modal-body">
+							<i class="modal-icon"></i>
+							<p class="modal-message"></p>
+						</div>
+						</div>
+					</div>
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Please fill out the form below and a representative will get backto you shortly.</p>
+							<h2 class="major" id="scroll-target">Get in touch</h2>
+							<p>Please fill out the form below and a representative will get back to you shortly.</p>
 							<!-- <form method="post" action="#"> -->
-							<form method="post" onSubmit="handleForm()"> 
+							<form method="post" id="contact-form"> 
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -149,6 +158,7 @@
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form>
+							
 							<ul class="contact">
 								<li class="icon solid fa-home">
 									SolidSonics Limited<br />
@@ -168,33 +178,13 @@
 					</section>
 
 			</div>
-
-			<!-- send Email -->
-			<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-				<script>
-					(function () {
-					  emailjs.init('bu1taiOb_fxdGQPsq');
-					})();
-				 </script>
-				 <script>
-					const handleForm = async (e) => {
-					  try {
-						await emailjs.sendForm('service_3ftu4hx', 'template_nf0ty7k', document.getElementById('post'));
-						alert('email sent!');
-					  } catch (error) {
-						console.error(error);
-						alert('Failed to send email');
-					  }
-					};
-				  </script>
-
 		<!-- Scripts -->
+			<script  src="assets/js/email.utils.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
